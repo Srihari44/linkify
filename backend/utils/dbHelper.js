@@ -1,8 +1,7 @@
 const mongoose = require("mongoose");
-
 const { DB_CONNECTION_STRING } = process.env;
 
-mongoose.connect(DB_CONNECTION_STRING);
+mongoose.connect(DB_CONNECTION_STRING).catch((err) => console.log(err));
 
 const UserSchema = new mongoose.Schema({
   name: String,
@@ -12,32 +11,12 @@ const UserSchema = new mongoose.Schema({
 
 const userDbRef = mongoose.model("User", UserSchema, "users");
 
-const createUserData = async ({
-  name,
-  email,
-  password,
-  successCallback,
-  failureCallback,
-}) => {
-  try {
-    const oldUser = await userDbRef.findOne({ email });
-    if (oldUser) {
-      failureCallback(409, "User Exists");
-    } else {
-      userDbRef.create({ name, email, password }, (_, user) =>
-        successCallback(user)
-      );
-    }
-  } catch (err) {
-    console.log(err);
-    failureCallback(500, "There was a problem registering the user");
-  }
+const findUserByEmail = async (email) => {
+  return await userDbRef.findOne({ email });
 };
 
-const findUserByEmail=async(email)=>{
+const createUserData = async ({ name, email, password }) => {
+  return await userDbRef.create({ name, email, password });
+};
 
-  return await userDbRef.findOne({ email });
-
-}
-
-module.exports = { createUserData,findUserByEmail };
+module.exports = { createUserData, findUserByEmail };
