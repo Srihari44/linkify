@@ -35,4 +35,10 @@ const createUserData = async ({
   }
 };
 
-module.exports = { createUserData };
+const findUserByEmail=async(email)=>{
+
+  return await userDbRef.findOne({ email });
+
+}
+
+module.exports = { createUserData,findUserByEmail };
