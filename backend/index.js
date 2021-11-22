@@ -1,10 +1,10 @@
 require("dotenv").config();
 const express = require("express");
-const app = express();
-const { PORT } = process.env;
 const { createUserData } = require("./utils/dbHelper");
 const { generateAccessToken } = require("./utils/jwtHelper");
 
+const app = express();
+const { PORT } = process.env;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
@@ -25,5 +25,5 @@ app.post("/register", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Example app listening at ${PORT}`);
+  console.log(`Linkify server listening at ${PORT}`);
 });
