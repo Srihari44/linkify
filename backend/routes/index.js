@@ -6,7 +6,7 @@ const { findMissingParam } = require("../utils/miscHelper");
 
 IndexRouter.post("/register", async (req, res) => {
   const { name, email, password } = req.body;
-  const { missing, parameter } = findMissingParam(name, email, password);
+  const { missing, parameter } = findMissingParam({ name, email, password });
   if (missing) {
     return res
       .status(400)
@@ -34,7 +34,7 @@ IndexRouter.post("/register", async (req, res) => {
 
 IndexRouter.post("/login", async (req, res) => {
   const { email, password } = req.body;
-  const { missing, parameter } = findMissingParam(email, password);
+  const { missing, parameter } = findMissingParam({ email, password });
   if (missing) {
     return res
       .status(400)

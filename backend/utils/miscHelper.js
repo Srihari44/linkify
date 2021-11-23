@@ -1,5 +1,5 @@
-const findMissingParam = (...params) => {
-  const parameter = params.find((item) => !Boolean(item));
+const findMissingParam = (obj) => {
+  const parameter = Object.keys(obj).find((item) => !Boolean(obj[item]));
   return { missing: !!parameter, parameter };
 };
 
