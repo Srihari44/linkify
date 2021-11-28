@@ -1,10 +1,12 @@
 const UserRouter = require("express").Router();
-const { verifyAuthStatus } = require("../middleware/auth");
-
-UserRouter.all("/*", verifyAuthStatus);
+const { verifySocketToken } = require("../utils/socketHelper");
 
 UserRouter.get("/", (req, res) => {
-  res.json({ message: "hello world 🎉😂" });
+  const io = req.io;
+  io.use(verifySocketToken);
+  io.on("connection", (socket) => {
+    console.log("hello!");
+  });
 });
 
 module.exports = UserRouter;
