@@ -1,0 +1,17 @@
+.Landing-page-navbar-items{
+    display: flex;
+    flex-flow: row;
+    width: auto;
+}
+
+.Landing-page-navbar-items a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.Navbar-logo{
+
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+}

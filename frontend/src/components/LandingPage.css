@@ -1,0 +1,225 @@
+.Landing-page-outter-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+
+
+}
+
+.Landing-page-inner-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+
+
+}
+
+.Landing-page-greeting-container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+
+}
+
+
+.Langing-page-greeting-section{
+
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    background:#fff;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+.Landing-page-navbar-container{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 0;
+    flex-flow: row;
+    height: 60px;
+    width: 100%;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+
+
+
+}
+
+.Landing-page-navbar-items{
+    display: flex;
+    flex-flow: row;
+    width: auto;
+}
+
+.Landing-page-navbar-items a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.Navbar-logo{
+
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.Landing-page-joinNow-btn,.Landing-page-signIn-btn{
+
+    display: flex;
+    padding: 5px;
+    border: 1px solid #2929cc;
+    background-color: #fff;
+    margin: 3px;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #2929cc;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+
+
+}
+
+.Greeting-section-form-img-container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background:#fff;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+.Greeting-page-form-container,.Greeting-img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background:#fff;
+    height: 100%;
+    width: 50%;
+
+
+}
+
+.Greeting-text-container{
+
+    display: flex;
+
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #2929cc;
+    font-size: 40px;
+    width: 350px;
+
+
+}
+
+.Sign-up-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+
+}
+.User-details-input-container,.User-action-btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    margin: 10px;
+    outline: none;
+}
+
+.User-email-mobile,.User-password{
+    width: 350px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.885);
+    border-radius: 2px;
+    margin: 10px;
+    padding-left: 5px;
+
+}
+
+.Sign-Up-btn{
+
+    width: 350px;
+    height: 45px;
+    background-color:  #2929cc;
+    border-radius: 50px;
+    font-weight: 300;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    margin: 10px;
+    outline: none;
+    border-color: transparent;
+    cursor: pointer;
+
+}
+
+.Gooogle-sign-Up-btn{
+
+    width: 350px;
+    height: 45px;
+    background-color:  #2929cc;
+    border-radius: 50px;
+    font-weight: 300;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    margin: 10px;
+    outline: none;
+    border-color: transparent;
+    cursor: pointer;
+
+
+}
+
+.divider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 2px;
+    color: gray;
+}
+
+.divider-line{
+    height: 1.5px;
+    width: 170px;
+    background-color: gray;
+}
+
+.Greeting-img{
+    height: 600px;
+    width: 600px;
+}
