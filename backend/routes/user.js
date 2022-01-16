@@ -1,11 +1,8 @@
 const UserRouter = require("express").Router();
-const { verifySocketToken } = require("../utils/socketHelper");
 
-UserRouter.get("/", (req, res) => {
-  const io = req.io;
-  io.use(verifySocketToken);
-  io.on("connection", (socket) => {
-    console.log("hello!");
+UserRouter.ws("/", (ws, req) => {
+  ws.on("message", function (msg) {
+    ws.send(msg);
   });
 });
 
