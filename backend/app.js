@@ -1,12 +1,9 @@
 "use strict";
 require("dotenv").config();
 const express = require("express");
-const { PORT } = process.env;
 const app = express();
-const { verifySocketToken } = require("./middleware/socket");
-require("express-ws")(app, undefined, {
-  wsOptions: { verifyClient: verifySocketToken },
-});
+require("./utils/socketHelper").initializeSocket(app);
+const { PORT } = process.env;
 const indexRouter = require("./routes/index");
 const userRouter = require("./routes/user");
 

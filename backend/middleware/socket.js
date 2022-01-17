@@ -1,10 +1,13 @@
 const { verifyAccessToken } = require("../utils/jwtHelper");
+const { SOCKET_ROUTES } = process.env;
 
 const verifySocketToken = (info, cb) => {
-  const queryParams = "?" + info.req.url.split("?").slice(1);
+  const [route, ...queryItems] = info.req.url.split("?");
+  const queryParams = "?" + queryItems[0];
   const qs = new URLSearchParams(queryParams);
   const token = qs.get("token");
-  if (!token) cb(false, 401, "Unauthorized");
+  const allowedRoute = SOCKET_ROUTES.includes(route);
+  if (!token || !allowedRoute) cb(false, 401, "Unauthorized");
   else {
     try {
       verifyAccessToken(token);
